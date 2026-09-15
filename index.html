@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afirmaciones — Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="phone">
+    <header>
+      <button class="icon" id="categoriesBtn">☷</button>
+      <div><strong>Afirmaciones</strong><small id="categoryLabel">Todas</small></div>
+      <button class="icon" id="settingsBtn">⚙</button>
+    </header>
+
+    <section id="home" class="view active">
+      <article id="quoteCard" class="quote-card">
+        <img id="quoteImage" alt="">
+        <div class="shade"></div>
+        <p id="quoteText"></p>
+        <span id="counter"></span>
+      </article>
+      <div class="actions">
+        <button id="shareBtn">↗<small>Compartir</small></button>
+        <button id="favoriteBtn">♡<small>Favorito</small></button>
+      </div>
+      <button class="primary" id="nextBtn">Siguiente afirmación ↓</button>
+    </section>
+
+    <section id="categories" class="view">
+      <h2>Categorías</h2>
+      <div id="categoryGrid" class="grid"></div>
+    </section>
+
+    <section id="favorites" class="view">
+      <h2>Favoritos</h2>
+      <div id="favoriteList" class="list"></div>
+    </section>
+
+    <section id="create" class="view">
+      <h2>Nueva afirmación</h2>
+      <label>Frase<textarea id="newText" maxlength="220" placeholder="Ej. Confío en mi proceso."></textarea></label>
+      <label>Categoría<select id="newCategory"></select></label>
+      <label class="upload">Imagen opcional<input id="newImage" type="file" accept="image/*"></label>
+      <img id="imagePreview" class="preview" alt="">
+      <button class="primary" id="saveBtn">Guardar afirmación</button>
+      <p class="hint">En esta demo se guarda únicamente en este navegador.</p>
+    </section>
+
+    <section id="settings" class="view">
+      <h2>Personalización</h2>
+      <label>Fondo
+        <select id="backgroundSelect"><option value="sunset">Atardecer</option><option value="lavender">Lavanda</option><option value="mint">Menta</option><option value="night">Noche</option></select>
+      </label>
+      <label>Estilo de letra
+        <select id="fontSelect"><option value="serif">Elegante</option><option value="sans">Moderno</option><option value="hand">Suave</option></select>
+      </label>
+      <label>Color del texto<input id="colorPicker" type="color" value="#ffffff"></label>
+      <h3>Vista previa</h3><div id="settingsPreview">Un día a la vez.</div>
+    </section>
+
+    <nav>
+      <button data-view="home" class="nav-active">⌂<span>Inicio</span></button>
+      <button data-view="categories">▦<span>Categorías</span></button>
+      <button data-view="favorites">♡<span>Favoritos</span></button>
+      <button data-view="create">＋<span>Crear</span></button>
+    </nav>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
